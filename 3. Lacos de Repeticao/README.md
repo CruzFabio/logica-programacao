@@ -1,0 +1,1 @@
+O Propósito principal de uma estrutura de repetição é executar um bloco de código várias vezes com base em uma condição.

@@ -1,0 +1,33 @@
+/*
+ * Para ler e escrever em C# utilizamos os seguintes métodos da classe Console:
+    - Console.ReadLine - Lé uma linha com dado(s) de Entrada(inputs) do usuário;
+    - Console.WriteLine - Imprime um texto de saída(output) e pula uma linha.
+ */
+
+using System;
+
+public class Desafio 
+{
+    public static void main()
+    {
+        //Lendo valores de entrada
+        float valorSalario = float.Parse(Console.ReadLine());
+        float valorBeneficios = float.Parse(Console.ReadLine());
+
+        //Criando o processamento
+        float valorImposto = 0;
+        if(valorSalario >= 0 && valorSalario <= 1100.00)
+        {
+            valorImposto = 0.05F * valorSalario;
+        } else if(valorSalario >= 1100.01 && valorSalario <= 2500.00)
+        {
+            valorImposto = 0.10F * valorSalario;
+        } else {
+            valorImposto = 0.15F * valorSalario;
+        } 
+
+        //Calcula e imprime a saída (com 2 casas decimais)
+        float saida = valorSalario - valorImposto + valorBeneficios;
+        Console.WriteLine(saida.ToString("0.00"));
+    }
+}
